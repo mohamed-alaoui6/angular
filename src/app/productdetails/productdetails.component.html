@@ -1,0 +1,32 @@
+<ul class="products">
+    <li class="product-item">
+      <div class="product">
+        <div class="product-details">
+          <img [src]="getImageURL(p)" [style.width.px]="60" [style.height.px]="60" id="img" />
+          <div class="product-info">
+            <div class="name" id="name">{{p.name}}</div>
+            
+            
+            
+          
+            @if (showDetails) {
+              <div class="name" id="d1">{{p.quantite}}pieces</div>
+              <div class="name" id="d1">{{p.price}} DH</div>
+              <div class="name" id="desc" >{{p.description}}</div>
+            }
+            
+            <div class="description"></div>
+            <button (click)="toggleDetails(p)">Voir les détails</button>
+          </div>
+        </div>
+        @if (p.qeerebyasali) {
+          <div id="alert" style="color: red;">Alert⚠️</div>
+          }
+        <div class="price">
+          <div></div>
+          <button class="btn btn-light" (click)="buying()">buy<i class="bi bi-cart"></i></button>
+          
+        </div>
+      </div>
+    </li>
+  </ul>
