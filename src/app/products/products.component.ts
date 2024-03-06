@@ -21,14 +21,15 @@ export class ProductsComponent implements OnInit,OnChanges,OnDestroy {
   
   errorMessage:string|undefined;
    products! : Array<product>;
-   
 ngOnChanges(changes: SimpleChanges): void {
 }
 ngOnDestroy(): void  { console.log("ondestroy declared! ")}
   getAllProduct(){
     
+    
       this.productService.getAllProduct().subscribe({
         next: (data: any) => {
+          
           this.products = data;
         },
         error: (err: any) => {
