@@ -1,0 +1,6 @@
+<div>
+  @for (p of products; track $index) {
+    <app-productdetails [p]="p" (buyEvent)="buying(p)"></app-productdetails>
+}
+</div>
+
